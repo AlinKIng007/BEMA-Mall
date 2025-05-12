@@ -1,0 +1,198 @@
+/* this css for grid with 2d and 3d */
+@import url("https://fonts.googleapis.com/css2?family=Basic&family=Poppins&display=swap");
+
+:root {
+  --background: #000000;
+  --background-border: red;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins;
+  height: 100vh;
+  padding: 32px;
+  display: grid;
+  place-items: center;
+  background-color: var(--background);
+}
+
+
+.gallery {
+  display: flex;
+  background-color:
+  transparent !important;
+  gap: 16px;
+  scale: 1.6;
+}
+
+.card {
+  position: relative;
+  left: 0px;
+  width: 140px;
+  height: 160px;
+  background-color: var(--background);
+  border-radius: 8px;
+  transition: 1000ms all;
+  transform-origin: center left;
+  box-shadow: 0 0 20px var(--box-shadow-color); /* Using custom property */
+  outline: 1px solid var(--background);
+  overflow: hidden;
+}
+
+/* Custom properties for box-shadow colors */
+#card1 {
+  --box-shadow-color: #18ff2b; /* Custom box-shadow color for card1 */
+}
+
+#midCard {
+  --box-shadow-color: #e5ff00; /* Custom box-shadow color for midCard */
+}
+
+#rightCard {
+  --box-shadow-color: #ff0000; /* Custom box-shadow color for rightCard */
+}
+
+
+.card img {
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+  box-shadow: 0 0 20px var(--box-shadow-color);
+  margin: 5px;
+}
+
+.card:hover figcaption {
+  font-size: 0.6rem;
+  position: absolute;
+  height: 80px;
+  width: 160px;
+  display: flex;
+  align-items: end;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0) 100%);
+  color: white;
+  left: 0px;
+  bottom: 0px;
+  padding-left: 12px;
+  padding-bottom: 10px;
+}
+
+.card:hover~.card {
+  font-weight: bold;
+  cursor: pointer;
+  transform: translateX(22px);
+}
+body {
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  background-color:black;
+  }
+  section{
+  height:100%;
+  width:100%;
+    position:absolute ;  background:radial-gradient(#333,#000);
+  }
+  .leaf{
+      position:absolute ;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+  }
+  .leaf div{
+  position:absolute ;
+  display:block ;
+  }
+  .leaf div:nth-child(1){
+      left:20%; 
+      animation:fall 15s linear infinite ;
+      animation-delay:-2s;
+  
+  }
+  .leaf div:nth-child(2){
+      left:70%; 
+      animation:fall 15s linear infinite ;
+      animation-delay:-4s;
+  }
+  .leaf div:nth-child(3){
+      left:10%; 
+      animation:fall 20s linear infinite ;
+      animation-delay:-7s;
+      
+  }
+  .leaf div:nth-child(4){
+      left:50%; 
+     animation:fall 18s linear infinite ; 
+     animation-delay:-5s;
+  }
+  .leaf div:nth-child(5){
+      left:85%; 
+      animation:fall 14s linear infinite ;
+      animation-delay:-5s;
+  }
+  .leaf div:nth-child(6){
+      left:15%; 
+      animation:fall 16s linear infinite ;
+      animation-delay:-10s;
+  }
+  .leaf div:nth-child(7){
+      left:90%; 
+      animation:fall 15s linear infinite ;
+      animation-delay:-4s;
+  }
+  
+  @keyframes fall{
+      0%{
+          opacity:1;
+          top:-10%;
+          transform:translateX (20px) rotate(0deg);
+      }
+      20%{
+          opacity:0.8;
+          transform:translateX (-20px) rotate(45deg);
+      }
+      40%{
+  
+          transform:translateX (-20px) rotate(90deg);
+      }
+      60%{
+          
+         transform:translateX (-20px) rotate(135deg); 
+      }
+      80%{
+      
+          transform:translateX (-20px) rotate(180deg);
+      }
+      100%{
+          
+          top:110%;
+          transform:translateX (-20px) rotate(225deg);
+      }
+      }
+  .leaf1{
+      transform: rotateX(180deg);
+  }
+  h2{
+      position:absolute ;
+      top:40%;
+      width:100%;
+      font-family: 'Courgette', cursive;
+      font-size:4em;
+      text-align:center;
+      transform:translate ;
+      color:#fff;
+      transform:translateY (-50%);
+  }
+
